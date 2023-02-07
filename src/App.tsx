@@ -1,34 +1,61 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
+import { Box } from "@chakra-ui/react"
+import { Flex, Spacer} from '@chakra-ui/react'
+import {Stack, HStack, VStack} from "@chakra-ui/react"
+import { Text } from '@chakra-ui/react'
+
+//css
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Flex and Box Example</h1>
+      <br/>
+      {/*Flex and Box example */}
+      <Flex justify='center'>
+      <Box bg='blue' textColor="white" w="400px" h="100" p='40px'>
+        Box 1
+      </Box>
+      {/*make Box as semantic HTML example */}
+      <Box as="section" bg='red' textColor="white" w="300px" h="100" p='40px'>
+        Box - Semantic HTML Example
+      </Box>
+      </Flex>
+      <br/>
+      <hr/>
+      <br/>
+      <h1>Stack / VStack / HStack Example </h1>
+      <br/>
+      {/* Stack/VStack/HStack example */}
+        <HStack>
+        <Box bg='blue' textColor="white" w="400px" h="100" p='40px'>
+        Box 2
+      </Box>
+      <Box bg='blue' textColor="white" w="400px" h="100" p='40px'>
+        Box 3
+      </Box>
+      <Box bg='blue' textColor="white" w="400px" h="100" p='40px'>
+        Box 4
+      </Box>
+        </HStack>
+
+      <br/>
+      <hr/>
+      <br/>
+      <h1>Text Example </h1>
+      <br/>
+      {/*Text example */}
+    <Text noOfLines={2}>
+    "The quick brown fox jumps over the lazy dog" is an English-language pangram—a
+  sentence that contains all of the letters of the English alphabet. Owing to
+  its existence, Chakra was created."
+    </Text>
+      
+       
     </div>
   )
 }
 
-export default App
