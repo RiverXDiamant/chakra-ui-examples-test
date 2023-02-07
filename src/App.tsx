@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import { Box } from "@chakra-ui/react"
+
+// ChakraUI Components
+import { Box, Text, Heading, Button } from "@chakra-ui/react"
 import { Flex, Spacer} from '@chakra-ui/react'
 import {Stack, HStack, VStack} from "@chakra-ui/react"
-import { Text } from '@chakra-ui/react'
 
 //css
 import './App.css'
@@ -12,6 +13,10 @@ export default function App() {
 
   return (
     <div className="App">
+      {/*Heading example; If you don't specify a heading using 'as' prop, it will render <h2> by default */}
+
+      <Heading as="h1" fontSize='40px'>Chakra Component Heading Example</Heading>
+      <br/>
       <h1>Flex and Box Example</h1>
       <br/>
       {/*Flex and Box example */}
@@ -53,6 +58,12 @@ export default function App() {
   sentence that contains all of the letters of the English alphabet. Owing to
   its existence, Chakra was created."
     </Text>
+      <br/>
+      <hr/>
+      <br/>
+      <h1>Styled Props Example </h1>
+
+      
       
        
     </div>
